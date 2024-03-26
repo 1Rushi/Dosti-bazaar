@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment method</title>
+    <style>
+    
+        body {
+            background-image: url(pic.jpg); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 3px solid black;
+            margin: 500px;
+            margin-top: 50px;
+            text-align: center;
+            transition: 0s;
+        }
+
+        h1 {
+            background-color: aqua;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 1px;
+            font-size: 20px;
+        }
+
+        button {
+            align-items: center;
+            border-radius: 125px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment method</h1>
+    <form id="payment-form" action="/process_payment" method="post">
+        <label for="name">Name of Card:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" name="card-number" required>
+        
+        <label for="expiration-date">Expiration Date:</label>
+        <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+        
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+        <br>
+        <br>
+        
+        <button type="submit">Submit Payment</button>
+    </form>
+</body>
+</html>
+
